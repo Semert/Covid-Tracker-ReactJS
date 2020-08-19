@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This repo created by ,React Hooks, Charts.JS and Material UI.
+This repo created by React Hooks, Charts.JS and Material UI.
 
 API used: https://covid19.mathdro.id/api
 
