@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Cards, CountryPicker, Chart } from './components';
+import { Cards, CountryPicker, Chart, StateTable } from './components';
 import { fetchData } from './api';
 import styles from './App.module.css';
 import image from './images/image.png';
@@ -10,7 +10,6 @@ const App = () => {
 
   useEffect(() => {
     async function loadData() {
-      // eslint-disable-next-line no-shadow
       const data = await fetchData();
       setData({ data });
     }
@@ -31,6 +30,7 @@ const App = () => {
       <Cards data={data} />
       <CountryPicker handleCountryChange={handleCountryChange} />
       <Chart data={data} country={country} />
+      {country ? <StateTable country={country} /> : null}
     </div>
   );
 };
